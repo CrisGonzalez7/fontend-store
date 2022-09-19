@@ -181,17 +181,6 @@ img {
 }
 
 
-/**Nosotros**/
-
-@media (min-width: 768px) {
-    .contenedor-info {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-column-gap: 2rem;
-    }
-}
-
-
 /**Footer**/
 
 .footer {
@@ -200,11 +189,22 @@ img {
     margin-top: 2rem;
 }
 
-.copyright {
+.footer__texto {
     font-family: var(--fuentePrin);
     color: white;
     font-size: 2.2rem;
     text-align: center;
+}
+
+
+/**Nosotros**/
+
+@media (min-width: 768px) {
+    .contenedor-info {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 2rem;
+    }
 }
 
 
