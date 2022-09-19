@@ -1,9 +1,13 @@
 :root {
-    --fuentePrin: 'Staatliches', cursive;
     /*colores*/
     --primario: #9c27b0;
-    --primarioOsc: #89119d;
+    --primarioOscuro: #89119d;
     --secundario: #ffce00;
+    --secundarioOscuro: rgb(233, 287, 2);
+    --blanco: #fff;
+    --negro: #000;
+    /*fuente*/
+    --fuentePrin: 'Staatliches', cursive;
 }
 
 html {
@@ -16,6 +20,9 @@ html {
 *:after {
     box-sizing: inherit;
 }
+
+
+/** Globales **/
 
 body {
     background-color: var(--primario);
@@ -33,17 +40,34 @@ body.footer-fijo main {
     flex: 1;
 }
 
-h1 {
+h1,
+h2,
+h3 {
     color: var(--secundario);
     text-align: center;
-    font-size: 4rem;
     font-family: var(--fuentePrin);
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+h3 {
+    font-size: 2.4rem;
 }
 
 p {
     font-size: 1.8rem;
     font-family: Arial, Helvetica, sans-serif;
-    color: white;
+    color: var(--blanco);
+}
+
+a {
+    text-decoration: none;
 }
 
 .contenedor {
@@ -65,22 +89,23 @@ img {
     padding: 3rem 0;
 }
 
+.header__logo {
+    margin: 1rem 0;
+}
+
 
 /**Navegación**/
 
-.barra {
-    background-color: var(--primarioOsc);
+.navegacion {
+    background-color: var(--primarioOscuro);
     padding: 1rem 0;
-}
-
-.barra .nav {
     display: grid;
     grid-template-columns: repeat(2, 200px);
     grid-column-gap: 1rem;
     justify-content: center;
 }
 
-.barra .nav a {
+.navegacion__enlace {
     font-family: var(--fuentePrin);
     font-size: 3rem;
     text-align: center;
@@ -88,7 +113,8 @@ img {
     text-decoration: none;
 }
 
-.barra .nav a:hover {
+.navegacion__enlace--activo,
+.navegacion__enlace:hover {
     color: var(--secundario);
 }
 
@@ -108,7 +134,7 @@ img {
 }
 
 .producto {
-    background-color: var(--primarioOsc);
+    background-color: var(--primarioOscuro);
     padding: 1rem;
 }
 
@@ -169,7 +195,7 @@ img {
 /**Footer**/
 
 .footer {
-    background-color: var(--primarioOsc);
+    background-color: var(--primarioOscuro);
     padding: 1rem 0;
     margin-top: 2rem;
 }
